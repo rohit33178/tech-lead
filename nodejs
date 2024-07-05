@@ -1,0 +1,18 @@
+1. What is your experience with Node versions (e.g., Node 14, Node 16)? How have you handled version upgrades?
+2. How do you handle errors and exceptions in Node? Can you explain the try-catch block and error-first callback approach?
+3. What is your understanding of Node's event-driven, non-blocking I/O model? How have you leveraged this in your applications?
+4. Can you explain the concept of a Node cluster and how you would implement it?
+5. How do you optimize Node performance? What tools have you used for profiling and benchmarking?
+6. What is your experience with Node streams? How have you used them in your applications?
+7. Can you explain the differences between Node's built-in HTTP server and a framework like Express?
+8. How do you handle security in Node, such as authentication and authorization?
+9. What is the difference between Node's asynchronous and synchronous APIs? Provide an example of each.
+10. How does Node's event loop work? Explain the phases of the event loop and how they relate to asynchronous programming.
+11. What is a Node cluster, and how does it differ from a single Node process? Provide an example of when you would use a cluster.
+12. How do you handle errors in Node? Explain the try-catch block, error-first callback approach, and uncaughtException event.
+13. What is a Node stream, and how does it differ from a traditional callback-based approach? Provide an example of when you would use a stream.
+14. How does Node's module system work? Explain the difference between require and import, and how you would use each.
+15. What is a Node package manager (npm), and how does it differ from a package manager like yarn? Provide an example of when you would use each.
+16. How do you optimize Node performance? Explain the use of tools like Chrome DevTools, Node Inspector, and Benchmark.js.
+17. What is Node's security model, and how does it relate to common web vulnerabilities like SQL injection and cross-site scripting (XSS)? Provide an example of how you would secure a Node application.
+18. How does Node's non-blocking I/O model impact application design? Provide an example of how you would design an application to take advantage of non-blocking I/O.
