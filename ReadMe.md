@@ -38,3 +38,4 @@ Code review is the process of reviewing and analyzing the source code of a softw
 React app improvement refers to the process of optimizing and enhancing the performance, scalability, and maintainability of a React application. 
 
 
+In summary, a Tech Lead is a technical expert who leads a team to deliver a project or product, provides technical guidance, leadership, communication, problem-solving, and mentorship. The role is important because it ensures technical excellence, team leadership, effective decision-making, communication, and innovation.
