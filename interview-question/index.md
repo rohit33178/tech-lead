@@ -26,7 +26,67 @@ The skills required for this role include:
 - Bachelor's or master's degree in computer science or equivalent experience
 
 ### Technology Skills
-- [`Javascript Common`](https://github.com/rohit33178/tech-lead/blob/main/interview/javascript-common.md)
+Here are some proper details for MERN Stack Lead interview questions:
+
+MongoDB:
+
+1. What is your experience with MongoDB?
+2. How do you optimize MongoDB performance?
+3. What are the different data models in MongoDB?
+4. How do you handle data consistency and integrity in MongoDB?
+5. What are the different indexing strategies in MongoDB?
+
+Express:
+
+1. What is your experience with Express.js?
+2. How do you handle routing and middleware in Express?
+3. What are the different ways to handle authentication and authorization in Express?
+4. How do you optimize Express performance?
+5. What are the different template engines available for Express?
+
+React:
+
+1. What is your experience with React?
+2. How do you handle state management in React?
+3. What are the different ways to handle props in React?
+4. How do you optimize React performance?
+5. What are the different libraries available for React?
+
+Node.js:
+
+1. What is your experience with Node.js?
+2. How do you handle asynchronous programming in Node.js?
+3. What are the different ways to handle errors in Node.js?
+4. How do you optimize Node.js performance?
+5. What are the different frameworks available for Node.js?
+
+General:
+
+1. How do you handle scalability and reliability in a MERN stack application?
+2. What are the different ways to handle security in a MERN stack application?
+3. How do you handle deployment and monitoring of a MERN stack application?
+4. What are the different agile methodologies you have experience with?
+5. How do you handle team management and leadership?
+
+Behavioral:
+
+1. Can you tell me about a project you lead and the challenges you faced?
+2. How do you handle conflict within a team?
+3. Can you tell me about a time when you had to make a difficult technical decision?
+4. How do you handle change management within a team?
+5. Can you tell me about a time when you had to mentor a junior developer?
+
+Technical:
+
+1. Write a code snippet to handle authentication in Express.
+2. Write a code snippet to handle state management in React.
+3. Write a code snippet to handle data modeling in MongoDB.
+4. Write a code snippet to handle error handling in Node.js.
+5. Write a code snippet to handle performance optimization in MERN stack.
+
+
+
+- <a href="https://github.com/rohit33178/tech-lead/blob/main/interview/javascript-common.md" target="_blank">[`Javascript Common`]</a>
 
 - [`Javascript Medium`](https://github.com/rohit33178/tech-lead/blob/main/interview/javascript-medium.md)
 

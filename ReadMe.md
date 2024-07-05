@@ -28,7 +28,7 @@ A Tech Lead is a technical expert who leads a team of developers and engineers t
 
 ## Following are the Key responsibility area
 
-### 1. [Key Responsibilities](https://github.com/rohit33178/tech-lead/blob/main/key-responsibilities/index.md)
+### 1. <a href="https://github.com/rohit33178/tech-lead/blob/main/key-responsibilities/index.md" target="_blank">[Key Responsibilities]</a>
 Code review is the process of reviewing and analyzing the source code of a software application.
 
 ### 2. [Code Review](https://github.com/rohit33178/tech-lead/blob/main/code-review/index.md)
