@@ -1,6 +1,6 @@
 ## Tech Lead
 
-> A Tech Lead is a technical expert who leads a team of developers and engineers to design, develop, and deliver a specific project or product. They are responsible for the technical direction and vision of the project, and ensure that the team is working towards a common goal.
+A Tech Lead is a technical expert who leads a team of developers and engineers to design, develop, and deliver a specific project or product. They are responsible for the technical direction and vision of the project, and ensure that the team is working towards a common goal.
  
 ### The proper definition of a Tech Lead includes:
 
