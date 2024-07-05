@@ -29,7 +29,7 @@ A Tech Lead is a technical expert who leads a team of developers and engineers t
 ## Following are the Key responsibility area
 
 ### 1. [Key Responsibilities](https://github.com/rohit33178/tech-lead/blob/main/key-responsibilities/index.md)
-Code review is the process of reviewing and analyzing the source code of a software application.
+Tech Lead key responsibilities, here you can get the detailed information.
 
 ### 2. [Code Review](https://github.com/rohit33178/tech-lead/blob/main/code-review/index.md)
 Code review is the process of reviewing and analyzing the source code of a software application.
@@ -37,7 +37,7 @@ Code review is the process of reviewing and analyzing the source code of a softw
 ### 3. [React Improvements](https://github.com/rohit33178/tech-lead/blob/main/react-improvements/index.md)
 React app improvement refers to the process of optimizing and enhancing the performance, scalability, and maintainability of a React application. 
 
-### 3. <a href="https://github.com/rohit33178/tech-lead/blob/main/interview-question/index.md">Techlead Interview Questions</a>
+### 3. [Techlead Interview Questions](https://github.com/rohit33178/tech-lead/blob/main/interview-question/index.md)(_target, 'blank')
 React app improvement refers to the process of optimizing and enhancing the performance, scalability, and maintainability of a React application. 
 
 
