@@ -34,14 +34,14 @@ This can involve various techniques and strategies, such as:
 
 Optimizing a React application involves a combination of techniques that can improve its performance, scalability, and maintainability. Here are some points to consider:
 
-1. [Code splitting:](https://github.com/rohit33178/tech-lead/blob/main/react-improvements/code-splitting.md) Split your code into smaller chunks to reduce the initial load size.
+1. [Code splitting:](https://github.com/rohit33178/tech-lead/blob/main/react-improvements/react-code-splitting.md) Split your code into smaller chunks to reduce the initial load size.
 2. Tree shaking: Remove unused code to reduce bundle size.
 3. Minification: Minify code to reduce file size.
 4. Compression: Compress files using gzip or Brotli.
 5. Caching: Implement caching to reduce the number of requests made.
 6. Optimize images: Compress images to reduce file size.
-7. [Multiple re-renders] (https://github.com/rohit33178/tech-lead/blob/main/react-improvements/multiple-rerenders.md) : Use shouldComponentUpdate to prevent unnecessary re-renders.
-8. Use React.memo: Memoize components to prevent unnecessary re-renders.
+7. [Multiple re-renders] (https://github.com/rohit33178/tech-lead/blob/main/react-improvements/react-rerenders.md) : Use shouldComponentUpdate to prevent unnecessary re-renders.
+8. [React.memo](https://github.com/rohit33178/tech-lead/blob/main/react-improvements/react-memo.md): Memoize components to prevent unnecessary re-renders.
 9. Use React.useCallback: Memoize callbacks to prevent unnecessary re-renders.
 10. Optimize React hooks: Use useMemo and useCallback to optimize hooks.
 11. Avoid using too many context APIs: Context APIs can cause unnecessary re-renders.
