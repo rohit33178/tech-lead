@@ -115,26 +115,26 @@ Technical:
 
 ### Mern Tech Stack, AWS Services
 
-- [`Javascript Common`](https://github.com/rohit33178/tech-lead/blob/main/interview/javascript-common.md)
+- [`Javascript Common`](https://github.com/rohit33178/tech-lead/blob/main/interview-question/javascript-common.md)
 
-- [`Javascript Medium`](https://github.com/rohit33178/tech-lead/blob/main/interview/javascript-medium.md)
+- [`Javascript Medium`](https://github.com/rohit33178/tech-lead/blob/main/interview-question/javascript-medium.md)
 
-- [`Javascript Advance`](https://github.com/rohit33178/tech-lead/blob/main/interview/javascript-advance.md)
+- [`Javascript Advance`](https://github.com/rohit33178/tech-lead/blob/main/interview-question/javascript-advance.md)
 
-- [NodeJS](https://github.com/rohit33178/tech-lead/blob/main/interview/node-js.md)
+- [NodeJS](https://github.com/rohit33178/tech-lead/blob/main/interview-question/node-js.md)
 
-- [ExpressJS](https://github.com/rohit33178/tech-lead/blob/main/interview/express-js.md)
+- [ExpressJS](https://github.com/rohit33178/tech-lead/blob/main/interview-question/express-js.md)
 
-- [ReactJS](https://github.com/rohit33178/tech-lead/blob/main/interview/react-js.md)
+- [ReactJS](https://github.com/rohit33178/tech-lead/blob/main/interview-question/react-js.md)
 
-- [PostgreSQL](https://github.com/rohit33178/tech-lead/blob/main/interview/postgre-SQL.md)
+- [PostgreSQL](https://github.com/rohit33178/tech-lead/blob/main/interview-question/postgre-SQL.md)
 
-- [AWSS3](https://github.com/rohit33178/tech-lead/blob/main/interview/AWS-S3.md)
+- [AWSS3](https://github.com/rohit33178/tech-lead/blob/main/interview-question/AWS-S3.md)
 
-- [AWSECS](https://github.com/rohit33178/tech-lead/blob/main/interview/AWS-ECS.md)
+- [AWSECS](https://github.com/rohit33178/tech-lead/blob/main/interview-question/AWS-ECS.md)
 
-- [WebAnalytics](https://github.com/rohit33178/tech-lead/blob/main/interview/web-analysis.md)
+- [WebAnalytics](https://github.com/rohit33178/tech-lead/blob/main/interview-question/web-analysis.md)
 
-- [WebSecurity](https://github.com/rohit33178/tech-lead/blob/main/interview/web-security.md)
+- [WebSecurity](https://github.com/rohit33178/tech-lead/blob/main/interview-question/web-security.md)
 
-- [WebAcrhitecture](https://github.com/rohit33178/tech-lead/blob/main/interview/web-architecture.md)
+- [WebAcrhitecture](https://github.com/rohit33178/tech-lead/blob/main/interview-question/web-architecture.md)
