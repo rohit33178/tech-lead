@@ -84,7 +84,36 @@ Technical:
 4. Write a code snippet to handle error handling in Node.js.
 5. Write a code snippet to handle performance optimization in MERN stack.
 
+### The importance of technical interview questions lies in their ability to:
 
+1. Evaluate technical expertise: Technical questions help to determine whether a candidate has the necessary technical skills and knowledge to perform the job requirements.
+
+2. Assess problem-solving skills: Technical questions often require candidates to demonstrate their problem-solving skills, thinking critically, and approaching complex technical challenges.
+
+3. Measure experience: Technical questions can help to gauge a candidate's level of experience and familiarity with specific technologies, tools, or methodologies.
+
+4. Predict job performance: By assessing a candidate's technical abilities, interviewers can better predict how well they will perform in the role.
+
+5. Reduce bias: Technical questions can help to reduce bias in the hiring process by focusing on objective technical skills rather than subjective qualities.
+
+### Some common types of technical interview questions include:
+
+1. Coding challenges
+2. Algorithm and data structure questions
+3. System design questions
+4. Technical scenario-based questions
+5. Debugging exercises
+
+### Examples of technical interview questions include:
+
+1. Write a function to reverse a string.
+2. Explain the difference between monolithic architecture and microservices.
+3. Design a database schema for an e-commerce application.
+4. Troubleshoot a complex technical issue in a system.
+5. Optimize the performance of a slow database query.
+
+
+### Mern Tech Stack, AWS Services
 
 - [`Javascript Common`](https://github.com/rohit33178/tech-lead/blob/main/interview/javascript-common.md)
 
