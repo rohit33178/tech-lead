@@ -39,9 +39,9 @@ Here are the major key responsibility areas for a Tech Lead:
     - Developing and implementing new processes and procedures
     - Ensuring continuous improvement and learning
 10. Resource Management:
-- Managing technical budgets and resources
-- Ensuring effective allocation of resources to meet project goals and objectives
-- Identifying and mitigating resource constraints and bottlenecks.
+    - Managing technical budgets and resources
+    - Ensuring effective allocation of resources to meet project goals and objectives
+    - Identifying and mitigating resource constraints and bottlenecks.
 
 These key responsibility areas are not exhaustive, and the specific responsibilities of a 
 Tech Lead may vary depending on the organization, project, or product. 
