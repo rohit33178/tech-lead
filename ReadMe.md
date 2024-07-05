@@ -19,3 +19,9 @@ The role of a Tech Lead is crucial in software development because they:
 ## Following are the Key responsibility area
 
 ### 1. [Code Review](https://github.com/rohit33178/tech-lead/blob/main/code-review/index.md)
+Code review is the process of reviewing and analyzing the source code of a software application.
+
+### 1. [React Improvements](https://github.com/rohit33178/tech-lead/blob/main/react-improvements/index.md)
+React app improvement refers to the process of optimizing and enhancing the performance, scalability, and maintainability of a React application. 
+
+

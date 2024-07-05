@@ -1,4 +1,40 @@
 ## Code Review
+Code review is the process of reviewing and analyzing the source code of a software application or system to ensure it meets certain standards, is bug-free, and is maintainable. It involves a thorough examination of the code by a developer or a team of developers to: 
+
+1. Check for errors and bugs
+2. Improve code quality and readability
+3. Ensure adherence to coding standards and best practices
+4. Optimize code performance and security
+5. Share knowledge and expertise among team members
+
+Code review is important because it:
+
+1. Improves code quality and reliability
+2. Reduces bugs and errors
+3. Enhances code readability and maintainability
+4. Promotes knowledge sharing and collaboration among developers
+5. Ensures adherence to coding standards and best practices
+6. Helps to detect and prevent security vulnerabilities
+7. Improves the overall quality of the software application or system
+
+Code review can be performed in various ways, including:
+
+1. Peer review: Reviewing code with a colleague or team member
+2. Pair programming: Writing code together with a partner
+3. Formal inspection: A structured review process with a checklist
+4. Tool-assisted review: Using tools like linters, formatters, and code analyzers
+
+Some best practices for code review include:
+
+1. Be thorough and detailed
+2. Be constructive and respectful
+3. Use a code review checklist
+4. Review code regularly
+5. Involve multiple reviewers
+6. Use code review tools and software
+7. Document findings and recommendations
+
+
 Here are the major key points to focus on while doing code review for a backend API development with Express JS as a Tech Lead:
 
 Here are some checklist pointers for the above list:
