@@ -1,0 +1,24 @@
+1. What is the difference between Express and Node? Explain how Express builds on top of Node.
+2. How does Express routing work? Explain the difference between app.VERB() and router.VERB(), and provide an example of when you would use each.
+3. What is Express middleware, and how does it relate to the request-response cycle? Provide an example of a custom middleware function.
+4. How does Express handle request and response objects? Explain the difference between req and res, and provide an example of how you would use each.
+5. What is an Express template engine, and how does it relate to dynamic rendering? Provide an example of using EJS or Pug with Express.
+6. How does Express handle sessions and cookies? Explain the difference between session and cookie storage, and provide an example of using Express-session and cookie-parser.
+7. What is Express-GraphQL, and how does it relate to building GraphQL APIs? Provide an example of using Express-GraphQL to build a simple API.
+8. How does Express handle real-time applications? Explain the difference between WebSockets and Server-Sent Events, and provide an example of using each with Express.
+9. What is Express-validator, and how does it relate to input validation? Provide an example of using Express-validator to validate user input.
+10. How does Express impact application design? Provide an example of how you would design an application to take advantage of Express features like routing, middleware, and template engines.
+11. What is your experience with Express versions (e.g., Express 4, Express 5)? How have you handled version upgrades?
+12. Can you explain the Express middleware architecture and how you have used it in your applications?
+13. How do you handle routing in Express? Can you explain the difference between app.VERB() and router.VERB()?
+14. What is your understanding of Express template engines (e.g., EJS, Pug)? How have you used them in your applications?
+15. Can you explain how you have used Express for building RESTful APIs?
+16. How do you handle errors and exceptions in Express? Can you explain the error-handling middleware approach?
+17. What is your experience with Express session management and cookie handling?
+18. Can you explain how you have used Express for building real-time applications (e.g., WebSockets, (link unavailable))?
+
+- Design a Node and Express architecture for a scalable e-commerce application.
+- Optimize a slow Node and Express application.
+- Implement authentication and authorization using Node and Express.
+- Handle a high volume of requests using Node and Express clustering.
+
