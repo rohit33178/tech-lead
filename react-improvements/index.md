@@ -40,7 +40,7 @@ Optimizing a React application involves a combination of techniques that can imp
 4. Compression: Compress files using gzip or Brotli.
 5. Caching: Implement caching to reduce the number of requests made.
 6. Optimize images: Compress images to reduce file size.
-7. [Multiple re-renders] (https://github.com/rohit33178/tech-lead/blob/main/react-improvements/react-rerenders.md) : Use shouldComponentUpdate to prevent unnecessary re-renders.
+7. [Multiple re-renders](https://github.com/rohit33178/tech-lead/blob/main/react-improvements/react-rerenders.md) : Use shouldComponentUpdate to prevent unnecessary re-renders.
 8. [React.memo](https://github.com/rohit33178/tech-lead/blob/main/react-improvements/react-memo.md): Memoize components to prevent unnecessary re-renders.
 9. Use React.useCallback: Memoize callbacks to prevent unnecessary re-renders.
 10. Optimize React hooks: Use useMemo and useCallback to optimize hooks.
