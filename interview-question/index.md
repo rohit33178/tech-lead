@@ -86,7 +86,7 @@ Technical:
 
 
 
-- <a href="https://github.com/rohit33178/tech-lead/blob/main/interview/javascript-common.md" target="__blank">[`Javascript Common`]</a>
+- [`Javascript Common`](https://github.com/rohit33178/tech-lead/blob/main/interview/javascript-common.md)
 
 - [`Javascript Medium`](https://github.com/rohit33178/tech-lead/blob/main/interview/javascript-medium.md)
 
