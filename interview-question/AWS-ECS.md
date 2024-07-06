@@ -1,6 +1,17 @@
 ### AWS Elastic Container Service
 Here are some important questions related to AWS ECS that can be used to evaluate a 10-year candidate for tech lead roles:
 
+Here are the pros and cons of AWS ECS ¹:
+### Pros:
+- Simple to use: Users have fewer decisions to make regarding computer, network, and security configurations, while still enjoying its capabilities.
+- Seamless integration with other AWS services: ECS integrates well with other AWS services such as Elastic Load Balancing, Identity and Access Management (IAM), CloudWatch, and more, allowing you to build highly scalable and reliable applications.
+- Flexible scaling options: ECS provides auto-scaling capabilities, allowing you to automatically scale your applications based on demand. You can configure scaling policies to adjust the number of tasks or services running in your ECS cluster.
+### Cons:
+- Vendor lock-in: Works exclusively only with AWS. When you start using it, it’s difficult to take the architecture away from this service. This also means that it will not work in a multi-cloud environment.
+- Lack of full control: While ECS provides a managed service for container orchestration, it may limit your control over certain functions of the infrastructure. This limitation can be a concern if you require deep control over your containers or have specific infrastructure requirements.
+
+> AWS ECS is a fully managed container orchestration service that allows you to easily run and scale containerised applications on AWS. ECS eliminates the need to manage the underlying infrastructure, making it easier for developers to focus on building their applications ¹.
+
 ### AWS ECS Basics
 
 1. What is AWS ECS and what are its main features?
