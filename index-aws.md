@@ -34,10 +34,6 @@ Here is a list of AWS services that are commonly used in software development:
     - CloudFormation (Infrastructure as Code)
     - CloudTrail (Audit and Compliance)
     - Config (Resource Configuration and Compliance)
-8. *Analytics and Machine Learning*:
-    - SageMaker (Machine Learning)
-    - Comprehend (Natural Language Processing)
-    - Rekognition (Computer Vision)
-    - Lake Formation (Data Warehousing and Analytics)
+
 
 This list is not exhaustive, but it covers many of the AWS services commonly used in software development. AWS offers a wide range of services, and the specific services used can vary depending on the project's requirements and architecture.
