@@ -28,7 +28,7 @@ To define a project scope successfully, follow these important steps:
     - Record the scope statement and supporting documentation.
     - Store scope documents in a centralized project management repository.
 10. *Manage Scope Changes*:
-- Establish a process for requesting and approving scope changes.
-- Ensure changes align with project objectives and constraints.
+   - Establish a process for requesting and approving scope changes.
+   - Ensure changes align with project objectives and constraints.
 
 By following these steps, you can define a clear and comprehensive project scope that sets your project up for success.
