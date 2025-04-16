@@ -8,7 +8,7 @@ CREATE SCHEMA IF NOT EXISTS tbl_ref;
 -- =============================================
 -- 2. TABLE DEFINITIONS
 -- =============================================
--- Create audit log table
+
 CREATE TABLE tbl_ref.audit_log (
     id SERIAL PRIMARY KEY,
     table_name TEXT NOT NULL,
@@ -19,12 +19,97 @@ CREATE TABLE tbl_ref.audit_log (
     changed_by TEXT
 );
 
+
+-- =============================== 
+-- Create user table
+-- ===============================
+
+
+-- fields: id, username, password, email,role, created_at, updated_at
+-- id: unique identifier for the user
+-- username: name of the user
+-- password: hashed password of the user
+-- email: email address of the user
+-- role: role of the user (admin, user, etc.)
+-- created_at: timestamp of when the record was created
+-- updated_at: timestamp of when the record was last updated
+
+CREATE TABLE IF NOT EXISTS tbl_ref.users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    role VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Enable RLS
+ALTER TABLE tbl_ref.users ENABLE ROW LEVEL SECURITY;
+-- Drop existing policies if they exist
+DROP POLICY IF EXISTS user_policy ON tbl_ref.users;
+DROP POLICY IF EXISTS admin_policy ON tbl_ref.users;
+-- Policy for regular users (can only see their own records)
+CREATE POLICY user_policy ON tbl_ref.users
+    FOR ALL
+    USING (id = current_user_id());
+-- Policy for admins (can see everything)
+CREATE POLICY admin_policy ON tbl_ref.users
+    FOR ALL
+    USING (current_user IN ('admin', 'superuser'));
+-- Add constraints to user table
+ALTER TABLE tbl_ref.users 
+ADD CONSTRAINT users_username_unique UNIQUE (username),
+ADD CONSTRAINT users_email_unique UNIQUE (email);
+-- Add check constraint to ensure username is not empty
+ALTER TABLE tbl_ref.users
+ADD CONSTRAINT users_username_not_empty CHECK (username <> '');
+-- Add check constraint to ensure username is not null
+ALTER TABLE tbl_ref.users
+ADD CONSTRAINT users_username_not_null CHECK (username IS NOT NULL);
+-- Add check constraint to ensure password is not empty
+ALTER TABLE tbl_ref.users
+ADD CONSTRAINT users_password_not_empty CHECK (password <> '');
+-- Add check constraint to ensure password is not null
+ALTER TABLE tbl_ref.users
+ADD CONSTRAINT users_password_not_null CHECK (password IS NOT NULL);
+-- Add check constraint to ensure email is not empty
+ALTER TABLE tbl_ref.users
+ADD CONSTRAINT users_email_not_empty CHECK (email <> '');
+-- Add check constraint to ensure email is not null
+ALTER TABLE tbl_ref.users
+ADD CONSTRAINT users_email_not_null CHECK (email IS NOT NULL);
+-- Add check constraint to ensure role is not empty
+ALTER TABLE tbl_ref.users
+ADD CONSTRAINT users_role_not_empty CHECK (role <> '');
+-- Add check constraint to ensure role is not null
+ALTER TABLE tbl_ref.users
+ADD CONSTRAINT users_role_not_null CHECK (role IS NOT NULL);
+
+-- create indexes for user table
+CREATE INDEX users_username_idx ON tbl_ref.users (username);
+CREATE INDEX users_email_idx ON tbl_ref.users (email);
+CREATE INDEX users_role_idx ON tbl_ref.users (role);
+
+-- create trigger for auditing user table
+DROP TRIGGER IF EXISTS audit_trigger ON tbl_ref.users;
+CREATE TRIGGER audit_trigger
+AFTER INSERT OR UPDATE OR DELETE ON tbl_ref.users
+FOR EACH ROW
+EXECUTE FUNCTION tbl_ref.audit_trigger_function('id', 'username', 'password', 'email', 'role');
+-- =============================================
+
+
+
+
+
 -- ### create affiliate table ### --
 -- This table stores information about affiliates
 
--- fields: id, country_name, country_code, created_at, updated_at
+-- fields: id, country_name, country_code, user_id, created_at, updated_at
 -- country_name: name of the country
 -- country_code: 2-letter ISO code for the country
+-- user_id: ID of the user who owns this record
 -- created_at: timestamp of when the record was created
 -- updated_at: timestamp of when the record was last updated
 
@@ -32,39 +117,27 @@ CREATE TABLE IF NOT EXISTS tbl_ref.tbl_affiliates (
     id SERIAL PRIMARY KEY,
     country_name VARCHAR(255) NOT NULL,
     country_code VARCHAR(10) NOT NULL,
+    user_id INTEGER NOT NULL,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
--- add policy for row level security
+-- Enable RLS
 ALTER TABLE tbl_ref.tbl_affiliates ENABLE ROW LEVEL SECURITY;
 
--- Create policy for row level security as loggedin user
-CREATE POLICY tbl_affiliates_policy ON tbl_ref.tbl_affiliates
-    FOR ALL
-    USING (true);
--- Create policy for row level security as admin user
-CREATE POLICY tbl_affiliates_policy_admin ON tbl_ref.tbl_affiliates
-    FOR ALL
-    USING (true);   
--- Create policy for row level security as superuser
-CREATE POLICY tbl_affiliates_policy_superuser ON tbl_ref.tbl_affiliates
-    FOR ALL
-    USING (true);
--- Create policy for row level security as test_user
-CREATE POLICY tbl_affiliates_policy_test_user ON tbl_ref.tbl_affiliates
-    FOR ALL
-    USING (true);
+-- Drop existing policies if they exist
+DROP POLICY IF EXISTS user_policy ON tbl_ref.tbl_affiliates;
+DROP POLICY IF EXISTS admin_policy ON tbl_ref.tbl_affiliates;
 
--- policy for create, update, delete and select for own record
-CREATE POLICY tbl_affiliates_policy_own_record ON tbl_ref.tbl_affiliates
+-- Policy for regular users (can only see their own records)
+CREATE POLICY user_policy ON tbl_ref.tbl_affiliates
     FOR ALL
     USING (user_id = current_user_id());
--- policy for create, update, delete and select for all record
-CREATE POLICY tbl_affiliates_policy_all_record ON tbl_ref.tbl_affiliates
-    FOR ALL
-    USING (true);
 
+-- Policy for admins (can see everything)
+CREATE POLICY admin_policy ON tbl_ref.tbl_affiliates
+    FOR ALL
+    USING (current_user IN ('admin', 'superuser'));
 
 -- Add constraints to affiliates table
 ALTER TABLE tbl_ref.tbl_affiliates
@@ -91,15 +164,22 @@ ADD CONSTRAINT tbl_affiliates_country_name_not_null CHECK (country_name IS NOT N
 ALTER TABLE tbl_ref.tbl_affiliates
 ADD CONSTRAINT tbl_affiliates_country_code_not_null CHECK (country_code IS NOT NULL);
 
+-- Add check constraint to ensure user_id is not null
+ALTER TABLE tbl_ref.tbl_affiliates
+ADD CONSTRAINT tbl_affiliates_user_id_not_null CHECK (user_id IS NOT NULL);
+
 -- Add check constraint to ensure country_name is not too long
 ALTER TABLE tbl_ref.tbl_affiliates
 ADD CONSTRAINT tbl_affiliates_country_name_length CHECK (LENGTH(country_name) <= 255);
+
 -- Add check constraint to ensure country_code is not too long
 ALTER TABLE tbl_ref.tbl_affiliates
 ADD CONSTRAINT tbl_affiliates_country_code_length CHECK (LENGTH(country_code) <= 10);
+
 -- Add check constraint to ensure country_code is not too short
 ALTER TABLE tbl_ref.tbl_affiliates
 ADD CONSTRAINT tbl_affiliates_country_code_length_min CHECK (LENGTH(country_code) >= 2);
+
 -- Add check constraint to ensure country_code is not too short
 ALTER TABLE tbl_ref.tbl_affiliates
 ADD CONSTRAINT tbl_affiliates_country_code_length_max CHECK (LENGTH(country_code) <= 3);
@@ -358,12 +438,65 @@ ORDER BY indexname;
 -- Insert sample data
 INSERT INTO tbl_ref.tbl_affiliates (country_name, country_code) 
 VALUES ('United States', 'US');
+INSERT INTO tbl_ref.tbl_affiliates (country_name, country_code)
+VALUES ('Canada', 'CA'),
+       ('Mexico', 'MX'),
+       ('United Kingdom', 'GB'),
+       ('Germany', 'DE'),
+       ('France', 'FR'),
+       ('Italy', 'IT'),
+       ('Spain', 'ES'),
+       ('Australia', 'AU'),
+       ('Japan', 'JP'),
+       ('China', 'CN'),
+       ('India', 'IN'),
+       ('Brazil', 'BR'),
+       ('South Africa', 'ZA'),
+       ('Russia', 'RU'),
+       ('Netherlands', 'NL'),
+       ('Sweden', 'SE'),
+       ('Norway', 'NO'),
+       ('Finland', 'FI'),
+       ('Denmark', 'DK'),
+       ('Belgium', 'BE'),
+       ;
 
--- Query sample data
-SELECT * FROM tbl_ref.tbl_affiliates;
+-- =============================================
+-- 10. TABLE MODIFICATIONS
+-- =============================================
 
--- View audit log summary
-SELECT table_name, column_name, changed_by, COUNT(*) AS change_count
-FROM tbl_ref.audit_log
-GROUP BY table_name, column_name, changed_by
-ORDER BY table_name, column_name, changed_by;
+-- Add user_id column to tbl_affiliates
+ALTER TABLE tbl_ref.tbl_affiliates 
+ADD COLUMN user_id INTEGER;
+
+-- Add foreign key constraint to reference users table
+ALTER TABLE tbl_ref.tbl_affiliates
+ADD CONSTRAINT fk_tbl_affiliates_user_id
+FOREIGN KEY (user_id) 
+REFERENCES tbl_ref.users(id)
+ON DELETE RESTRICT
+ON UPDATE CASCADE;
+
+-- Add not null constraint after setting default values
+-- First, update existing records with a default user_id (you'll need to replace 1 with your actual default user ID)
+UPDATE tbl_ref.tbl_affiliates 
+SET user_id = 1 
+WHERE user_id IS NULL;
+
+-- Now add the not null constraint
+ALTER TABLE tbl_ref.tbl_affiliates
+ALTER COLUMN user_id SET NOT NULL;
+
+-- Recreate RLS policies with the new user_id column
+DROP POLICY IF EXISTS user_policy ON tbl_ref.tbl_affiliates;
+DROP POLICY IF EXISTS admin_policy ON tbl_ref.tbl_affiliates;
+
+-- Policy for regular users (can only see their own records)
+CREATE POLICY user_policy ON tbl_ref.tbl_affiliates
+    FOR ALL
+    USING (user_id = current_user_id());
+
+-- Policy for admins (can see everything)
+CREATE POLICY admin_policy ON tbl_ref.tbl_affiliates
+    FOR ALL
+    USING (current_user IN ('admin', 'superuser'));
