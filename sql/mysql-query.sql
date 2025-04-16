@@ -432,33 +432,40 @@ WHERE schemaname = 'tbl_ref' AND tablename = 'tbl_affiliates'
 GROUP BY indexname
 ORDER BY indexname;
 
+-- Check constraints
+
+SELECT table_name, constraint_name, constraint_type
+FROM information_schema.table_constraints
+WHERE table_name = 'users';
+
 -- =============================================
 -- 9. SAMPLE DATA OPERATIONS
 -- =============================================
 -- Insert sample data
-INSERT INTO tbl_ref.tbl_affiliates (country_name, country_code) 
-VALUES ('United States', 'US');
+
 INSERT INTO tbl_ref.tbl_affiliates (country_name, country_code)
-VALUES ('Canada', 'CA'),
-       ('Mexico', 'MX'),
-       ('United Kingdom', 'GB'),
-       ('Germany', 'DE'),
-       ('France', 'FR'),
-       ('Italy', 'IT'),
-       ('Spain', 'ES'),
-       ('Australia', 'AU'),
-       ('Japan', 'JP'),
-       ('China', 'CN'),
-       ('India', 'IN'),
-       ('Brazil', 'BR'),
-       ('South Africa', 'ZA'),
-       ('Russia', 'RU'),
-       ('Netherlands', 'NL'),
-       ('Sweden', 'SE'),
-       ('Norway', 'NO'),
-       ('Finland', 'FI'),
-       ('Denmark', 'DK'),
-       ('Belgium', 'BE'),
+VALUES 
+    ('Canada', 'CA'),
+    ('Mexico', 'MX'),
+    ('United Kingdom', 'GB'),
+    ('Germany', 'DE'),
+    ('France', 'FR'),
+    ('Italy', 'IT'),
+    ('Spain', 'ES'),
+    ('Australia', 'AU'),
+    ('Japan', 'JP'),
+    ('China', 'CN'),
+    ('India', 'IN'),
+    ('Brazil', 'BR'),
+    ('South Africa', 'ZA'),
+    ('Russia', 'RU'),
+    ('Netherlands', 'NL'),
+    ('Sweden', 'SE'),
+    ('Norway', 'NO'),
+    ('Finland', 'FI'),
+    ('Denmark', 'DK'),
+    ('Belgium', 'BE'),
+    ('United States', 'US')
        ;
 
 -- =============================================
