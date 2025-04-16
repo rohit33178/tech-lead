@@ -49,6 +49,8 @@ ALTER TABLE tbl_ref.users ENABLE ROW LEVEL SECURITY;
 -- Drop existing policies if they exist
 DROP POLICY IF EXISTS user_policy ON tbl_ref.users;
 DROP POLICY IF EXISTS admin_policy ON tbl_ref.users;
+DROP POLICY IF EXISTS superuser_policy ON tbl_ref.users;
+
 -- Policy for regular users (can only see their own records)
 CREATE POLICY user_policy ON tbl_ref.users
     FOR ALL
@@ -57,6 +59,10 @@ CREATE POLICY user_policy ON tbl_ref.users
 CREATE POLICY admin_policy ON tbl_ref.users
     FOR ALL
     USING (current_user IN ('admin', 'superuser'));
+-- Policy for superusers (can see everything)
+CREATE POLICY superuser_policy ON tbl_ref.users
+    FOR ALL
+    USING (current_user IN ('superuser'));
 -- Add constraints to user table
 ALTER TABLE tbl_ref.users 
 ADD CONSTRAINT users_username_unique UNIQUE (username),
