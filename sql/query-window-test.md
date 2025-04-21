@@ -1,4 +1,4 @@
--- Command to create the Customers table
+### Command to create the Customers table
 ```sql
 CREATE TABLE Customers (
     CustomerID INT PRIMARY KEY,
@@ -17,7 +17,7 @@ INSERT INTO Customers (CustomerID, FirstName, LastName, City) VALUES
 ```
 ```sql
 
--- Command to create the Orders table
+### Command to create the Orders table
 CREATE TABLE Orders (
     OrderID INT PRIMARY KEY,
     CustomerID INT,
@@ -26,7 +26,7 @@ CREATE TABLE Orders (
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
 );
 
--- Command to insert data into the Orders table
+### Command to insert data into the Orders table
 INSERT INTO Orders (OrderID, CustomerID, OrderDate, TotalAmount) VALUES
 (101, 1, '2023-01-15', 100.50),
 (102, 2, '2023-01-20', 250.00),
@@ -37,14 +37,14 @@ INSERT INTO Orders (OrderID, CustomerID, OrderDate, TotalAmount) VALUES
 (107, 5, '2023-04-10', 50.00),
 (108, 1, '2023-05-01', 180.99);
 ```
--- You can now run your SQL queries against these tables and data.
+### You can now run your SQL queries against these tables and data.
 
-/*
+
 -- Write a SQL query to rank customers based on their total spending. 
 -- The ranking should be within each city. 
 -- The customer with the highest total spending in each city should have a rank of 1. 
 -- Display City, FirstName, LastName, TotalSpending, and Rank.
-*/
+
 
 ```SQL
 select 
@@ -64,10 +64,9 @@ from
 Inner join customers as c ON c.customerid = t.customerid
 order by c.city, rank asc;```
 
-/*
+
 -- Write a SQL query to find the cumulative total amount spent by each customer over time. 
 -- The result should display CustomerID, OrderDate, TotalAmount, and CumulativeTotal. Order the results by CustomerID and OrderDate.
-*/
 
 ```SQL
 select 
